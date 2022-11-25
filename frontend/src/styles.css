@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    background-color: rgb(88, 105, 95);
+}
+
+    
+.border {
+    background-color: rgb(222, 231, 231);
+    box-shadow: 0px 0px 25px 1px rgb(154, 255, 147);
+    /* width: 97%; */
+}
+
+.mynav{
+    background-color: rgb(56, 49, 49);
+    /* navbar-dark -> for white text */
+}

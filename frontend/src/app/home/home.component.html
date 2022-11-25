@@ -1,0 +1,28 @@
+<nav class="navbar navbar-dark navbar-expand-md  mynav">
+    <div class="container-fluid">
+      <a class="navbar-brand btn" routerLink="" >
+        <img src="https://www.logolynx.com/images/logolynx/0c/0c7191dc35a536be1326d8c778722949.png" alt="Logo" width="35" height="40" class=" d-inline-block align-text-top">
+        Library App
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link btn btn-outline-success text-white m-2" *ngIf="!auth.loggedin()" routerLink="login">Log In</a>
+           
+
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-outline-success text-white m-2" routerLink="signup">Sign Up</a>
+           
+          </li>
+          
+         
+        </ul>
+        
+      </div>
+    </div>
+  </nav>
+  <router-outlet></router-outlet>

@@ -1,0 +1,62 @@
+<div class="d-flex justify-content-center">
+    <div class=" p-3 rounded border m-2 mt-5 mb-4">
+
+        <div class=" d-flex justify-content-center">
+            <div class="  rounded  p-3 ">
+                <div class="col-12">
+                    <h2>Sign up</h2>
+                    <form [formGroup]="signupform" (ngSubmit)="signupcheck()">
+                        <div class="form-group">
+
+                            <label for="exampleInputEmail1">Enter your Name</label>
+
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                                formControlName="name">
+
+                            <div *ngIf="f['name'].touched && f['name'].invalid" class="alert alert-danger">
+                                <div *ngIf="f['name'].errors && f['name'].errors['required']">Name is required.</div>
+                                <div *ngIf="f['name'].errors && f['name'].errors['minlength']">Name should be 5
+                                    character.</div>
+                            </div>
+
+                            <br>
+
+                            <label for="exampleInputEmail2">Enter your Email address</label>
+
+                            <input type="email" class="form-control" id="exampleInputEmail2"
+                                aria-describedby="emailHelp" formControlName="email">
+
+                            <div *ngIf="f['email'].touched && f['email'].invalid" class="alert alert-danger">
+                                <div *ngIf="f['email'].errors && f['email'].errors['required']">Email is required.</div>
+                                <div *ngIf="f['email'].errors && f['email'].errors['email']">Please, enter valid email
+                                    address.</div>
+                            </div>
+                            
+                            <br>
+
+                            <label for="exampleInputPassword1">Enter your Password</label>
+
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                formControlName="password">
+
+                            <div *ngIf="f['password'].touched && f['password'].invalid" class="alert alert-danger">
+                                <div *ngIf="f['password'].errors && f['password'].errors['required']">password is
+                                    required.</div>
+                                <div *ngIf="f['password'].errors && f['password'].errors['minlength']">password should
+                                    be 5 character.</div>
+                            </div>
+
+                            <br>
+                            
+                        </div>
+
+                        <button [disabled]="signupform.invalid" type="submit"
+                            class="btn rounded my-2 btn-warning">Submit</button>
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

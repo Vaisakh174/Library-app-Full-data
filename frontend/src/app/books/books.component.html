@@ -1,0 +1,88 @@
+<nav class="navbar navbar-expand-sm navbar-dark mynav">
+    <div class="container-fluid">
+        <a class="navbar-brand  btn" >
+            <img src="https://www.logolynx.com/images/logolynx/0c/0c7191dc35a536be1326d8c778722949.png" alt="Logo"
+                width="35" height="40" class=" d-inline-block align-text-top">
+            Library App
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item ">
+                    <a class="nav-link btn btn-outline-success m-2 text-white" *ngIf="auth.loggedin()" routerLink="booksList">Books</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-outline-success m-2 text-white" *ngIf="auth.loggedin()" routerLink="addBook">Add New Book</a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link btn btn-outline-success m-2 text-white" *ngIf="auth.loggedin()" >User : {{user}}</a>
+              </li>
+                <li class="nav-item ">
+                    <a class="nav-link btn btn-outline-success m-2 text-white" *ngIf="auth.loggedin()" (click)="logout()" >Log Out </a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+<router-outlet></router-outlet>
+
+<footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <h6>About</h6>
+          <p class="text-justify">Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative to help the upcoming
+            programmers with the code. Scanfcode focuses on providing the most efficient code or snippets as the code
+            wants to be simple. We will help programmers build up concepts in different programming languages that include
+            C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.</p>
+        </div>
+  
+        <div class="col-xs-6 col-md-3">
+          <h6>More</h6>
+          <ul class="footer-links">
+            <li><a href="#">C</a></li>
+            <li><a href="#">UI Design</a></li>
+            <li><a href="#">PHP</a></li>
+            <li><a href="#">Java</a></li>
+            <li><a href="#">Android</a></li>
+            <li><a href="# ">Templates</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-xs-6 col-md-3">
+          <h6>Quick Links</h6>
+          <ul class="footer-links">
+            <li><a routerLink="">Home</a></li>
+            <li><a routerLink="signin">Sign in</a></li>
+            <li><a routerLink="login">Log in</a></li>
+            <!-- <li><a routerLink="#">Privacy Policy</a></li>
+            <li><a routerLink="#">Sitemap</a></li> -->
+          </ul>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          <p class="copyright-text">Copyright &copy; 2022 All Rights Reserved by
+            <a href="#">Vaisakh VS</a>.
+          </p>
+        </div>
+  
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <ul class="social-icons">
+            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>

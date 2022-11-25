@@ -1,0 +1,24 @@
+<div class="d-flex justify-content-center">
+    <div class=" m-4 ">
+
+        <div class="row  row-cols-1 row-cols-sm-2 row-cols-lg-4 row-cols-md-3 g-4 text-center ">
+            <div *ngFor="let data of libraryData" let i=index class="col">
+                <div class="card h-100">
+                    <img src={{data.bookimgaddress}} class="card-img-top" height="350px" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{data.bookname}}</h5>
+                        <p class="card-text">({{data.author}})</p>
+                        <a (click)="readmore(data._id)" class="card-text pointer">Read more</a>
+                        <div class="d-flex justify-content-between">
+                            <button (click)="update(data._id)" type="button" *ngIf="auth.loggedin()" class="btn btn-light">Update</button>
+                            <button (click)="deletes(data._id)" type="button" *ngIf="auth.loggedin()" class="btn btn-light">Delete</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>

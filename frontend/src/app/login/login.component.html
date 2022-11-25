@@ -1,0 +1,39 @@
+<div class="d-flex justify-content-center">
+    <div class="border p-3 rounded m-2 mt-5  mb-4">
+
+        <div class=" d-flex justify-content-center">
+            <div class="  rounded  p-3 ">
+                <div class="col-12">
+                    <h2>Login</h2>
+                    <form [formGroup]="loginform" (ngSubmit)="logincheck()">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Enter your Email</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" formControlName="email"
+                                aria-describedby="emailHelp" name="email">
+                                <div *ngIf="f['email'].touched && f['email'].invalid" class="alert alert-danger">
+                                    <div *ngIf="f['email'].errors && f['email'].errors['required']">Email is required.</div>
+                                    <div *ngIf="f['email'].errors && f['email'].errors['email']">Please, enter valid email address.</div>
+                                </div>
+                            <br>
+                            <label for="exampleInputPassword1">Enter your Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                formControlName="password">
+                                <div *ngIf="f['password'].touched && f['password'].invalid" class="alert alert-danger">
+                                    <div *ngIf="f['password'].errors && f['password'].errors['required']">password is
+                                        required.</div>
+                                    <div *ngIf="f['password'].errors && f['password'].errors['minlength']">password should
+                                        be 5 character.</div>
+                                </div>
+
+                        </div>
+
+                        <button [disabled]="loginform.invalid" type="submit"
+                            class="btn rounded my-2  btn-warning">Submit</button>
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
